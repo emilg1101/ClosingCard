@@ -1,5 +1,7 @@
 # ClosingCard
 
+![alt text](https://raw.githubusercontent.com/emilg1101/ClosingCard/master/screenshots/screenshot1.jpg)
+
 Gradle
 ------
 ```
