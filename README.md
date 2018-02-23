@@ -1,5 +1,7 @@
 # ClosingCard
 
+![alt text](https://raw.githubusercontent.com/emilg1101/ClosingCard/master/screenshots/screenshot1.jpg)
+
 Gradle
 ------
 ```
@@ -10,6 +12,30 @@ dependencies {
 }
 ```
 
+Usage
+-----
+
+```
+ClosingCard card = (ClosingCard) findViewById(R.id.card);
+
+card = card.newBuilder()
+        .setCornerRadius(35f)
+        .setTitle("Personal information")
+        .setButton("Next", new ClosingCard.OnButtonClickListener() {
+            @Override
+            public void onClick() {
+                Toast.makeText(MainActivity.this, "Next", Toast.LENGTH_SHORT).show();
+            }
+        })
+        .setOnCloseListener(new ClosingCard.OnCloseListener() {
+            @Override
+            public void onClose(View view) {
+                Toast.makeText(MainActivity.this, "Close", Toast.LENGTH_SHORT).show();
+            }
+        })
+        .build();
+```
+
 Changelog
 ---------
 * **0.0.1-beta**
@@ -18,6 +44,7 @@ Changelog
 License
 -------
   
+```
   MIT License
 
   Copyright (c) 2018 Emil Gafiyatullin
@@ -39,3 +66,4 @@ License
   LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
   OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
   SOFTWARE.
+```
